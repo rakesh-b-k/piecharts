@@ -1,0 +1,16 @@
+{
+  "name": "piecharts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://rakesh-b-k.gihub.io/piecharts",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
