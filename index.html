@@ -1,0 +1,231 @@
+<html>
+   <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta author="Rakesh B K"/>
+        <title>CORP OFFICE | DASHBOARD</title>
+        <link rel="stylesheet" href="css/dashboard.css"/>
+        <script src="chart.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="brand">
+                    <h1>Your Plant Name</h1>
+                    <p>Unit One with capacity 250 MW</p>
+                    <p>18 Dec 2018, 2.50 pm, Legend: <span style="color: green;">Low Performance Gap </span>| <span style="color:orangered;">Medium Performance Gap </span>| <span style="color: red;">High Performance Gap</span></p>
+                </div>
+                <div class="select_opt">
+                    <div class="select_left">
+                        <span>Select Plant:</span>
+                        <select>
+                            <option class="opt">Your Pane Name</option>
+                        </select>
+                    </div>
+                    <div class="select_right">  
+                        <span>Select Unit:</span>
+                        <select>
+                            <option class="opt">Unit-1</option>
+                        </select>
+                    </div>
+                </div>
+            </header>
+            <section>
+                <div style="margin-left:5%; margin-top: 5%;">
+                    <section style="width: 30%;float: left; margin-right: 3%;">
+                        <center><h2>Boiler efficiency</h2></center>
+                        <canvas id="disp" width="100%" height="100px"></canvas>
+                    </section>
+                    <section style="float:left; width:30%; margin-right: 3%;">
+                        <center><h2>Power Output</h2></center>
+                        <canvas id="disp1" width="100%" height="100px"></canvas>
+                    </section>
+                    <section style="float: left; width: 30%; margin-right: 3%;">
+                        <center><h2>Plant Efficiency</h2></center>
+                        <canvas id="disp2" width="100%" height="100px"></canvas>
+                    </section>
+                </div>
+            </section>
+            <section style="margin-bottom:3%;">
+                <div style="margin-left: 5%; margin-top: 5%;">
+                    <section style="width: 30%;float: left; margin-right: 3%;">
+                        <center><h2>Turbine Cycle Heat Rate</h2></center>
+                        <canvas id="disp3" width="100%" height="100px"></canvas>
+                    </section>
+                    <section style="float:left; width:30%; margin-right: 3%;">
+                        <center><h2>Unit Gross Heat Rate</h2></center>
+                        <canvas id="disp4" width="100%" height="100px"></canvas>
+                    </section>
+                    <section style="float: left; width: 30%; margin-left: 3%;">
+                        <center><h2>Coal Firing Rate</h2></center>
+                        <canvas id="disp5" width="100%" height="100px"></canvas>
+                    </section>
+                </div>
+            </section>    
+            <footer>
+                <center>
+                    <p>&copy; 2019. All Rights Reserved. Designed And Developed By Rakesh B K</p>
+                </center>
+            </footer>
+        </div>
+
+        <script type="text/javascript">
+
+            var ctx = document.getElementById("disp").getContext("2d");
+
+            var ctx1 = document.getElementById("disp1").getContext("2d");
+
+            var ctx2 = document.getElementById("disp2").getContext("2d");
+
+            var ctx3 = document.getElementById("disp3").getContext("2d");
+
+            var ctx4 = document.getElementById("disp4").getContext("2d");
+
+            var ctx5 = document.getElementById("disp5").getContext("2d");
+
+            var chart = new Chart(ctx, {
+                type: "pie",
+
+                data : {
+                   
+                    labels:["Design", "Corrected", "Operating"],
+
+                    datasets:[{
+
+                        label: "Boiler efficiency",
+
+                        data:["86.4", "86.2249515053", "87.5380955053"],
+
+                        backgroundColor:["red", "orange", "yellow"],
+
+                        borderColor: "#000",
+
+                        borderWidth: 1,
+                       
+                    }],
+               },
+
+            });
+
+            var chart = new Chart(ctx1, {
+                type: "pie",
+
+                data : {
+                   
+                    labels:["Design", "Corrected", "Operating"],
+
+                    datasets:[{
+
+                        label: "Power Output",
+
+                        data:["250", "252.2070493649", "252.14"],
+
+                        backgroundColor:["red", "orange", "yellow"],
+
+                        borderColor: "#000",
+
+                        borderWidth: 1 
+                       
+                    }],
+               },
+            });
+
+            var chart = new Chart(ctx2, {
+                type: "pie",
+
+                data : {
+                   
+                    labels:["Design", "Corrected", "Operating"],
+
+                    datasets:[{
+                   
+                        label: "Plant Efficiency", 
+
+                        data:["38.16920943134535", "37.95853052060002", "38.552084476280214"],
+
+                        backgroundColor:["red", "orange", "yellow"],
+
+                        borderColor: "#000",
+
+                        borderWidth: 1 
+                       
+                    }],
+               },
+            });
+
+            var chart = new Chart(ctx3, {
+                type: "pie",
+
+                data : {
+                   
+                    labels:["Design", "Corrected", "Operating"],
+
+
+                    datasets:[{
+                   
+                        label: "Turbine Cycle Heat Rate",   
+
+                        data:["1946.7", "1953.5386980883", "1952.7546475697"],
+
+                        backgroundColor:["red", "orange", "yellow"],
+
+                        borderColor: "#000",
+
+                        borderWidth: 1 
+                       
+                    }],
+               },
+            });
+
+            var chart = new Chart(ctx4, {
+                type: "pie",
+
+                data : {
+                   
+                    labels:["Design", "Corrected", "Operating"],
+
+
+                    datasets:[{
+                   
+                        label: "Unit Gross Heat Rate",
+
+                        data:["2253.13", "2265.6303819066", "2230.7483802312"],
+
+                        backgroundColor:["red", "orange", "yellow"],
+
+                        borderColor: "#000",
+
+                        borderWidth: 1 
+                       
+                    }],
+               },
+            });
+
+            var chart = new Chart(ctx5, {
+                type: "pie",
+
+                data : {
+
+                    labels:["Design", "Corrected", "Operating"],
+
+                    datasets:[{
+
+                        label: "Coal Firing Rate",
+
+                        data:["171", "161.8307415648", "175.76903018484208"],
+
+                        backgroundColor:["red", "orange", "yellow"],
+
+                        borderColor: "#000",
+
+                        borderWidth: 1 
+                       
+                    }],
+               },
+            });
+
+        </script>
+    </body>
+
+</html>

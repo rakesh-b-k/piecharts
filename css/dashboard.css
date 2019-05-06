@@ -1,0 +1,63 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: #ccc;
+    padding: 1%;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 100%;
+    border: 1px solid #F1F1F1;
+    background: #FFFFFF;
+    float: left;
+} 
+
+header, section{
+    width: 100%;
+    float:left;
+    border-bottom: 1px solid #ccc;
+}
+
+.select_right{
+    margin-left: 5%;
+}
+
+footer{
+    width: 100%;
+    float:left;
+    font-weight: 600;
+}
+
+.brand{
+    width: 60%;
+    float: left;
+}
+
+select{
+    width:40%;
+    margin-top: 14%;
+    padding: 2%;
+    background: none;    
+}
+
+.select_left, .select_right{
+    width: 15%;
+    float:left;
+}
+
+@media screen and (min-width: 1062px) and (max-width: 1612px){
+    .brand, .select{
+        width: 25%;
+    }
+
+    .select{
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+
+    .select_left{
+        margin-right:30%;
+    }
+}
